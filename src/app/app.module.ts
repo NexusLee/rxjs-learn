@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { DragComponent } from './drag/drag.component';
 import { YoukuComponent } from './youku/youku.component';
+import { FollowMouseComponent } from './follow-mouse/follow-mouse.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     DragComponent,
-    YoukuComponent
+    YoukuComponent,
+    FollowMouseComponent
   ],
   imports: [
     BrowserModule,

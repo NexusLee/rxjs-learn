@@ -1,0 +1,46 @@
+.box {
+  position: absolute;
+  -webkit-transform: translate(10px, 10px);
+  transform: translate(10px, 10px);
+  transition: 0.1s -webkit-transform ease-out;
+  transition: 0.1s transform ease-out;
+  transition: 0.1s transform ease-out, 0.1s -webkit-transform ease-out;
+  width: 40px;
+  height: 40px;
+  background: #ffa500;
+  cursor: pointer;
+}
+.box:nth-child(1) {
+  background: #f00;
+  z-index: 100;
+}
+.box:nth-child(2) {
+  background: #ffa500;
+  z-index: 99;
+  pointer-events: none;
+}
+.box:nth-child(3) {
+  background: #ff0;
+  z-index: 98;
+  pointer-events: none;
+}
+.box:nth-child(4) {
+  background: #008000;
+  z-index: 97;
+  pointer-events: none;
+}
+.box:nth-child(5) {
+  background: #0ff;
+  z-index: 96;
+  pointer-events: none;
+}
+.box:nth-child(6) {
+  background: #00f;
+  z-index: 95;
+  pointer-events: none;
+}
+.box:nth-child(7) {
+  background: #800080;
+  z-index: 94;
+  pointer-events: none;
+}

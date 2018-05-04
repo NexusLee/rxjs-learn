@@ -111,12 +111,55 @@ export class HomeComponent implements OnInit {
 
     const button = document.getElementById('demo');
     const click = Observable.fromEvent(button, 'click')
-    const example = click
+    const buffer = click
       .bufferTime(500)
       .filter(arr => arr.length >= 2);
 
-    example.subscribe({
+    buffer.subscribe({
       next: (value) => { console.log('success'); },
+      error: (err) => { console.log('Error: ' + err); },
+      complete: () => { console.log('complete'); }
+    });
+
+
+    function getPostData() {
+      return fetch('https://jsonplaceholder.typicode.com/posts/1')
+        .then(res => res.json())
+    }
+    /*var source = Observable.fromEvent<MouseEvent>(document.body, 'click');
+
+    var example = source.concatMap(
+      e => Observable.from(getPostData()),
+      (e, res, eIndex, resIndex) => {
+        console.log(e)
+        console.log(res)
+        return res.title
+      });
+
+    example.subscribe({
+      next: (value) => { console.log(value); },
+      error: (err) => { console.log('Error: ' + err); },
+      complete: () => { console.log('complete'); }
+    });*/
+
+    /*var source = Observable.fromEvent<MouseEvent>(document.body, 'click');
+
+    var example = source.switchMap(
+      e => Observable.from(getPostData()));
+
+    example.subscribe({
+      next: (value) => { console.log(value); },
+      error: (err) => { console.log('Error: ' + err); },
+      complete: () => { console.log('complete'); }
+    });*/
+
+    var source = Observable.fromEvent<MouseEvent>(document.body, 'click');
+
+    var example = source.mergeMap(
+      e => Observable.from(getPostData()));
+
+    example.subscribe({
+      next: (value) => { console.log(value); },
       error: (err) => { console.log('Error: ' + err); },
       complete: () => { console.log('complete'); }
     });

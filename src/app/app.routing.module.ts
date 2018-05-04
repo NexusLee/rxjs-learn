@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { DragComponent } from './drag/drag.component';
 import { YoukuComponent } from './youku/youku.component';
 import { FollowMouseComponent } from './follow-mouse/follow-mouse.component';
+import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'home',  component: HomeComponent },
   { path: 'youku',  component: YoukuComponent },
   { path: 'drag',  component: DragComponent },
-  { path: 'follow-mouse',  component: FollowMouseComponent }
+  { path: 'follow-mouse',  component: FollowMouseComponent },
+  { path: 'autocomplete',  component: AutocompleteComponent }
 ];
 
 

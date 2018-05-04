@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { DragComponent } from './drag/drag.component';
 import { YoukuComponent } from './youku/youku.component';
 import { FollowMouseComponent } from './follow-mouse/follow-mouse.component';
+import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FollowMouseComponent } from './follow-mouse/follow-mouse.component';
     HomeComponent,
     DragComponent,
     YoukuComponent,
-    FollowMouseComponent
+    FollowMouseComponent,
+    AutocompleteComponent
   ],
   imports: [
     BrowserModule,

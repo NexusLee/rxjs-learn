@@ -7,7 +7,7 @@ const emptyObserver = {
 export class Observer {
   destination: any;
   isStopped: Boolean;
-  constructor(destinationOrNext, error, complete){
+  constructor(destinationOrNext, error?, complete?){
     switch(arguments.length) {
       case 0:
         this.destination = this.safeObserver(emptyObserver);
@@ -15,6 +15,10 @@ export class Observer {
       case 1:
           if(!destinationOrNext) {
             this.destination = this.safeObserver(emptyObserver);
+            break;
+          }
+          if(destinationOrNext instanceof Observer){
+            this.destination = destinationOrNext;
             break;
           }
           if( typeof  destinationOrNext === 'object') {

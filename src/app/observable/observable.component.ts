@@ -30,7 +30,22 @@ export class ObservableComponent implements OnInit {
       }
     };
 
-    observable.subscribe(observer)
+    observable.subscribe(observer);
+
+    var ob = Observable.fromArray([1,2,3,4,5])
+      .map(x => x + 3)
+      .map(x => x + 1)
+
+    var newObserver = {
+      next: function(value) {
+        console.log(value)
+      },
+      complete: function() {
+        console.log('complete!')
+      }
+    }
+
+    ob.subscribe(newObserver);
   }
 
 }

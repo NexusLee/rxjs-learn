@@ -10,6 +10,8 @@ import { YoukuComponent } from './youku/youku.component';
 import { FollowMouseComponent } from './follow-mouse/follow-mouse.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { ObservableComponent } from './observable/observable.component';
+import { TamingSnakeComponent } from './taming-snake/taming-snake.component';
+import { JumpComponent } from './jump/jump.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ObservableComponent } from './observable/observable.component';
     YoukuComponent,
     FollowMouseComponent,
     AutocompleteComponent,
-    ObservableComponent
+    ObservableComponent,
+    TamingSnakeComponent,
+    JumpComponent
   ],
   imports: [
     BrowserModule,

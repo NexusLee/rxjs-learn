@@ -10,6 +10,7 @@ import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { ObservableComponent } from './observable/observable.component';
 import { TamingSnakeComponent } from './taming-snake/taming-snake.component';
 import { JumpComponent } from './jump/jump.component';
+import { AnimationComponent } from './animation/animation.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'autocomplete',  component: AutocompleteComponent },
   { path: 'observable',  component: ObservableComponent },
   { path: 'snake',  component: TamingSnakeComponent },
-  { path: 'jump',  component: JumpComponent }
+  { path: 'jump',  component: JumpComponent },
+  { path: 'animation',  component: AnimationComponent }
 ];
 
 

@@ -12,6 +12,7 @@ import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { ObservableComponent } from './observable/observable.component';
 import { TamingSnakeComponent } from './taming-snake/taming-snake.component';
 import { JumpComponent } from './jump/jump.component';
+import { AnimationComponent } from './animation/animation.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { JumpComponent } from './jump/jump.component';
     AutocompleteComponent,
     ObservableComponent,
     TamingSnakeComponent,
-    JumpComponent
+    JumpComponent,
+    AnimationComponent
   ],
   imports: [
     BrowserModule,

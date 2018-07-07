@@ -23,8 +23,6 @@ export class AnimationComponent implements OnInit {
     source.pipe(
       mergeMap(
         v => interval$, (e: any, res:any) => {
-          console.log(e);
-          console.log(res);
           if(res % 2 === 0){
             e.style.transform = `translate(100px, 0)`
           }else {
